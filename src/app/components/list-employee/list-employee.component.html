@@ -1,0 +1,47 @@
+<div class="searchFilter">
+    <caption>Search</caption>
+    <input type="text" [(ngModel)]="filters.keyword" name="keyword" (input)="nameFilter()">
+</div>
+<div class="tableStyle">
+    <table class="table caption-top table-hover">
+        <!-- <table class="table caption-top table-hover border border-dark border-3"> -->
+        <caption>List of Employees</caption>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">Email</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Address</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employee">
+                <th scope="row">{{employee.id}}</th>
+                <td>{{employee.employeeName}}</td>
+                <td>{{employee.employeeDepartment}}</td>
+                <td>{{employee.employeeEmail}}</td>
+                <td>{{employee.employeeExperience}}</td>
+                <td>{{employee.employeeAddress}}</td>
+                <td><a routerLink="/addemployee/{{employee.id}}">
+                        <i class="bi bi-pencil-square"></i>
+                    </a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Old design of Employee List -->
+<!-- <a routerLink="/addemployee">Add Employee</a>
+<input type="text" [(ngModel)]="filters.keyword" name="keyword" (input)="listEmployees()">
+<div *ngFor="let employee of employee" class="main">
+        <h3>{{employee.id}}</h3>
+        <h3>{{employee.employeeName}}</h3>
+        <h3>{{employee.employeeDepartment}}</h3>
+        <h3>{{employee.employeeEmail}}</h3>
+        <h3>{{employee.employeeExperience}}</h3>
+        <h3>{{employee.employeeAddress}}</h3>-->
+<!-- <a routerLink="/addemployee/{{employee.id}}">Edit</a> -->
+<!-- </div> -->

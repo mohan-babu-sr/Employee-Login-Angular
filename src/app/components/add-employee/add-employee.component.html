@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+
+<form (ngSubmit)="saveEmployee()">
+    <div class="inputStyles"> 
+        <div class="heading">
+            Enter Employee Details
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="employeename" [(ngModel)]="employee.employeeName" placeholder="Enter employee name" />
+            <label for="employeename">Employee Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="employeeDepartment" [(ngModel)]="employee.employeeDepartment"
+        placeholder="Enter employee department" />
+            <label for="employeeDepartment">Employee Department</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="employeeEmail" [(ngModel)]="employee.employeeEmail" placeholder="Enter employee E-Mail" />
+            <label for="employeeEmail">Employee Email</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="number" min="0" name="employeeExperience" [(ngModel)]="employee.employeeExperience" placeholder="Enter employee experience" />
+            <label for="employeeExperience">Employee Experience</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="employeeAddress" [(ngModel)]="employee.employeeAddress" placeholder="Enter employee address" />
+            <label for="employeeAddress">Employee Address</label>
+        </div>
+    </div>
+    <div class="buttonStyles1">
+        <button type="submit" class="btn btn-outline-success">Add Employee</button>
+    </div>
+    <div class="buttonStyles2">
+        <button type="submit" class="btn btn-outline-danger" *ngIf="employee.id" (click)="deleteEmployee(employee.id)">Delete Employee</button>
+    </div>
+</form>
+
+<!-- Old input styles -->
+
+<!-- <input type="text" name="employeename" [(ngModel)]="employee.employeeName" placeholder="Enter employee name" />
+<input type="text" name="employeeDepartment" [(ngModel)]="employee.employeeDepartment"
+    placeholder="Enter employee department" />
+<input type="text" name="employeeEmail" [(ngModel)]="employee.employeeEmail" placeholder="Enter employee E-Mail" />
+<input type="number" name="employeeExperience" [(ngModel)]="employee.employeeExperience"
+    placeholder="Enter employee experience" />
+<input type="text" name="employeeAddress" [(ngModel)]="employee.employeeAddress"
+    placeholder="Enter employee address" /> 
+<button type="submit">Add Employee</button>
+<button *ngIf="employee.id" (click)="deleteEmployee(employee.id)">Delete Employee</button>-->

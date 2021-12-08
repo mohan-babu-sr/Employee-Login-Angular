@@ -1,0 +1,15 @@
+.searchFilter{
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 10px;
+    width: 20%;
+}
+
+.searchFilter caption{
+    width: 400%;
+}
+
+.tableStyle{
+    width: 80%;
+    margin: auto;
+}
